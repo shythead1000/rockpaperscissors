@@ -1,0 +1,21 @@
+img{
+    height:auto;
+    width:150px;
+}
+
+.offscreen{
+    display:none;
+}
+
+.startbg{
+    background-image: url('room.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #39593e;
+}
+.gamebg{
+    background-image: url('bmoscreen.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #48bdae;
+}
