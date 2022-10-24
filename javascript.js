@@ -51,10 +51,12 @@ function game(){
             playerSelection = button.alt;
             playRound(playerSelection, BMOSelection);
             if (playerScore==0||BMOScore==0){
-                declareWinner();
                 setTimeout( () => {
-                    reset();
+                    declareWinner();
                 }, delay);
+                setTimeout( () => {
+                    gameEnd();
+                }, delay*2);
             }
         })
     })
@@ -135,11 +137,6 @@ function reset() {
     questionBox.classList.add('offscreen');
     body.removeAttribute('class');
     body.classList.add('startbg');
-    playerScore = 5;
-    BMOScore = 5;
-    screenText.textContent = '';
-    removeAllChildNodes(BMOLives);
-    removeAllChildNodes(playerLives);
     startContainer.classList.remove('offscreen');
     gameContainer.classList.add('offscreen');
     setTimeout( () => {
@@ -151,4 +148,17 @@ function removeAllChildNodes(parent){
     while (parent.firstChild){
         parent.removeChild(parent.firstChild);
     }
+};
+
+function gameEnd() {
+    questionBox.classList.add('offscreen');
+    body.removeAttribute('class');
+    body.classList.add('startbg');
+    startContainer.classList.remove('offscreen');
+    gameContainer.classList.add('offscreen');
+    removeAllChildNodes(questionBox);
+    questionBox.textContent = 'Thanks for playing !';
+    setTimeout( () => {
+        questionBox.classList.remove('offscreen');
+    }, delay/2);
 };

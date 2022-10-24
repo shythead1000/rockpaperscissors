@@ -7,24 +7,38 @@
     </head>
     <body>
         <div class="start-container">
-            <div class="question-box">
-                <p>Would you like to play a game of Rock Paper Scissors with me ?</p>
-                <button>Yes</button>
-                <button>No</button>
+        <div class="start-grid">
+            <div class="question-grid">
+                <div class="question-box">
+                    <p>Would you like to play a game of Rock Paper Scissors with me ?</p>
+                    <button>Yes</button>
+                    <button>No</button>
+                </div>
             </div>
-            <img src="bmo.png" alt="BMO">
+            <div class="bmo-grid">
+                <img src="bmo.png" alt="BMO">
+            </div>
+        </div>
         </div>
         <div class="game-container">
-            <div class="BMO-score"></div>
-            <div class="screen-text"></div>
-            <div class="screen">
-                <p>BMO is choosing...</p>
-                <img src="rock.png" alt="rock" class="button">
-                <img src="paper.png" alt="paper" class="button">
-                <img src="scissors.png" alt="scissors" class="button">
-                <p>Choose your weapon !</p>
+        <div class="game-grid">
+            <div class="bmoscore-grid">
+                <div class="BMO-score"></div>
             </div>
-            <div class="player-score"></div>
+            <div class="screen-grid">
+                <div class="screen-text"></div>
+                <div class="screen">
+                    <p>BMO is choosing...</p>
+                    <img src="rock.png" alt="rock" class="button">
+                    <img src="paper.png" alt="paper" class="button">
+                    <img src="scissors.png" alt="scissors" class="button">
+                    <p>Choose your weapon !</p>
+                </div>
+            </div>
+            <div class="playerscore-grid">
+                <div class="player-score"></div>
+            </div>
+        </div>
         </div>
         <script src="javascript.js"></script>
     </body>

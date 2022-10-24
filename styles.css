@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
 img{
     height:auto;
     width:150px;
@@ -6,16 +8,89 @@ img{
 .offscreen{
     display:none;
 }
-
 .startbg{
     background-image: url('room.jpg');
-    background-size: 100%;
     background-repeat: no-repeat;
     background-color: #39593e;
+    background-size: contain;
 }
 .gamebg{
     background-image: url('bmoscreen.jpg');
-    background-size: 100%;
     background-repeat: no-repeat;
     background-color: #48bdae;
+    background-size: contain;
+}
+
+.question-box{
+    background-color: #6ad7eb;
+    color: white;
+    text-shadow: 3px 3px darkcyan;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkcyan;
+    padding: 15px 30px 30px 30px;
+    border-radius: 60px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    font-family: 'Rubik Bubbles', cursive;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+.question-box button{
+    background-color: #6ad7eb;
+    color: white;
+    text-shadow: 3px 3px darkcyan;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkcyan;
+    border-style: solid;
+    border-width: 4px;
+    border-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Rubik Bubbles', cursive;
+    font-weight: bold;
+    font-size: large;
+}
+
+.start-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+.question-grid{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    max-width: fit-content;
+    justify-self: end;
+}
+.bmo-grid{
+    grid-column: 4;
+    grid-row: 4/5;
+}
+
+.game-grid{
+    display: grid;
+    grid-template-rows: repeat(10,200px);
+    margin-top: 7%;
+}
+.bmoscore-grid{
+    grid-row:1/2;
+    margin-left: 17%;
+}
+.screen-grid{
+    margin: auto;
+    text-align: center;
+    margin-top: 1em;
+    font-family: 'Rubik Bubbles', cursive;
+    text-shadow: 3px 3px darkcyan;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkcyan;
+    font-weight: bold;
+    font-size: xx-large;
+    color: white;
+}
+.playerscore-grid{
+    grid-row: 4/5;
+    margin-left: 17%;
 }
